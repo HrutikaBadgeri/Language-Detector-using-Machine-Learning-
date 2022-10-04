@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/design.css')}}" />
+
+    <title>Lingofy- Language Detector</title>
+  </head>
+  <body style="font-family: 'Poppins'">
+    <div class="main-heading">
+      <h1 id="heading">L I N G O F Y (✿◕‿◕✿)</h1>
+    </div>
+    <div class="banner">
+      <img id="image" align="center" src="{{url_for('static', filename = 'images/doodle.jpg')}}" />
+
+      <!-- <div class="description-text"> -->
+      <h2>IDENTIFY LANGUAGES, WITHIN SECONDS! (✿◠‿◠)</h2>
+      <br />
+      <!-- </div> -->
+    </div>
+    <div class="desc">
+      <h2>
+        Identify upto 17 languages with 100% accuracy! ⭐ <br />
+        <br />
+
+        (☞ﾟヮﾟ)☞ French - English - Malayalam - Hindi - Tamil - Kannada -
+        Spanish and 10 more! ☜(ﾟヮﾟ☜)
+      </h2>
+    </div>
+
+    <div class="second-desc">
+      <h2>
+        Our Machine Learning model is trained on accurate data and provides
+        accurate results.
+      </h2>
+      <img class="sec-img" src="{{url_for('static', filename = 'images/051.png')}}" />
+
+      <br />
+    </div>
+    <div class="input">
+    <h3>Enter your input text:</h3>
+    <form action="{{url_for('answer')}}" class="submission" method="POST">
+      <input class="text-box" name="language"></input>
+      <button type="submit">Submit</button>
+      <h3 class="preciction">{{prediction}}</h3>
+    </div>
+    </div>
+    
+  </body>
+</html>
